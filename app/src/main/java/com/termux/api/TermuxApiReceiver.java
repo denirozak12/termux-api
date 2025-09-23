@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.api;//#endregion
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -261,9 +261,10 @@ public class TermuxApiReceiver extends BroadcastReceiver {
                     WifiAPI.onReceiveWifiScanInfo(this, context, intent);
                 }
                 break;
-            case "WifiEnable":
+            case "WifiEnable"://#endregion
                 WifiAPI.onReceiveWifiEnable(this, context, intent);
-                break;
+                break;//#region
+                
             default:
                 Logger.logError(LOG_TAG, "Unrecognized 'api_method' extra: '" + apiMethod + "'");
         }
